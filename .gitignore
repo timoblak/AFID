@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+# weights are distributed separately (see README), never committed
+checkpoints/
+*.pth
+*.pt
+*.safetensors
+# demo output
+results/
+*.csv
+.venv/
+
+# local tests, not part of the release
+tests/
+*.egg-info/
+build/

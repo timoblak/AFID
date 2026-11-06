@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "afid"
+version = "1.0.0"
+description = "AFID: identification, quality assessment and feature extraction for fingermarks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"   # the code only; model weights have their own licenses
+license-files = ["LICENSE", "NOTICE"]
+dependencies = [
+    "torch>=2.3",
+    "timm>=1.0",
+    "opencv-python>=4.8",
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]
+
+[tool.setuptools.packages.find]
+include = ["afid*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
